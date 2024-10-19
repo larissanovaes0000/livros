@@ -25,7 +25,6 @@ export class CrudLivrosService {
     return this.livrosBehaviorSubject;
   }
 
-
   obterLivros(){
     return this._http.get<Livro[]>(this.API)
   }

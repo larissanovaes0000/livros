@@ -33,7 +33,7 @@ export class ModalIncluirEditarComponent implements OnInit {
   formulario = new FormGroup({
     nome: new FormControl('', [Validators.required, Validators.minLength(3)]),
     descricao: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    preco: new FormControl(0, [Validators.required, Validators.min(1)]),
+    preco: new FormControl('', [Validators.required, Validators.min(1)]),
     autor: new FormControl('', [Validators.required, Validators.minLength(3)])
   });
 
@@ -41,11 +41,11 @@ export class ModalIncluirEditarComponent implements OnInit {
     if (this.edicao) {
       this.formulario.get('nome')?.setValue(this.livro.nome);
       this.formulario.get('descricao')?.setValue(this.livro.descricao)
-      this.formulario.get('preco')?.setValue(this.livro.preco)
+      this.formulario.get('preco')?.setValue(this.livro.preco.toString())
       this.formulario.get('autor')?.setValue(this.livro.autor)
     }
   }
-
+  
   salvar() {
     const obj: Livro = {
       id: this.edicao ? this.livro.id : this.novoId.toString(),
@@ -60,7 +60,7 @@ export class ModalIncluirEditarComponent implements OnInit {
         this._crudLivrosService.editarLivro(obj).subscribe({
           next: () => {
             const modalRef = this._modalService.open(ModalGenericoComponent)
-            modalRef.componentInstance.mensagem = "Livro alterado com sucesso";
+            modalRef.componentInstance.mensagem = "Livro alterado com sucesso!";
             modalRef.componentInstance.class = 'success';
             this.activeModal.close();
           }
@@ -69,7 +69,7 @@ export class ModalIncluirEditarComponent implements OnInit {
         this._crudLivrosService.incluirLivro(obj).subscribe({
           next: () => {
             const modalRef = this._modalService.open(ModalGenericoComponent)
-            modalRef.componentInstance.mensagem = "Livro incluído com sucesso";
+            modalRef.componentInstance.mensagem = "Livro incluído com sucesso!";
             modalRef.componentInstance.class = 'success';
             this.activeModal.close();
           }

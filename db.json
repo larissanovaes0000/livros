@@ -1,32 +1,3 @@
 {
-  "livros": [
-    {
-      "id": "1",
-      "nome": "Um livro Novo do cvbcf",
-      "descricao": "uma descrição aqqwsdasuiiiii",
-      "preco": 9.9,
-      "autor": "Yasmina Khadra19"
-    },
-    {
-      "id": "2",
-      "nome": "O silêncio das montanhas",
-      "descricao": "A descrição de um livro é uma tipologia textual que retrata o enredo, o tema ou a ideia da obra.",
-      "preco": 9,
-      "autor": "Yasmina Khadra"
-    },
-    {
-      "id": "4",
-      "nome": "Livro 4",
-      "descricao": "A descrição de um livro é uma tipologia textualsdfsfd",
-      "preco": 6,
-      "autor": "Yasmina Khadra"
-    },
-    {
-      "id": "5",
-      "nome": "Livro 5",
-      "descricao": "A descrição de um livro é uma tipologia textual que retrata o enredo, o tema ou a ideia da obra.",
-      "preco": 3,
-      "autor": "Yasmina Khadra"
-    }
-  ]
+  "livros": []
 }

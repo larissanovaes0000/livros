@@ -12,6 +12,7 @@ import { CrudLivrosService } from './services/crud-livros.service';
 import { ModalExcluirComponent } from './components/modal-excluir/modal-excluir.component';
 import { ModalIncluirEditarComponent } from './components/modal-incluir-editar/modal-incluir-editar.component';
 import { ModalGenericoComponent } from './shared/components/modal-generico/modal-generico.component';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,14 @@ import { ModalGenericoComponent } from './shared/components/modal-generico/modal
     HttpClientModule,
     CommonModule,
     NgbModalModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
   providers: [
     CrudLivrosService,
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    provideNgxMask(),
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

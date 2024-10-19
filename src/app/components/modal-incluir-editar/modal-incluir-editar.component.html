@@ -36,14 +36,14 @@
         <div class="form-group mb-3">
           <label for="preco">Preço*</label>
           <input 
-            type="number" 
-            step="0.01"
-            min="0.01"
             class="form-control" 
             id="preco" 
             aria-describedby="preco" 
             placeholder="Digite Aqui"
             formControlName="preco"
+            prefix="R$ " 
+            mask="separator.2" 
+            thousandSeparator="."
           >
           <small *ngIf="formulario.get('preco')?.touched && formulario.get('preco')?.invalid" class="texto-erro">*Campo obrigatório</small>
         </div>
