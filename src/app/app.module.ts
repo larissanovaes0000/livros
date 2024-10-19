@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CrudLivrosService } from './services/crud-livros.service';
 import { ModalExcluirComponent } from './components/modal-excluir/modal-excluir.component';
 import { ModalIncluirEditarComponent } from './components/modal-incluir-editar/modal-incluir-editar.component';
+import { ModalGenericoComponent } from './shared/components/modal-generico/modal-generico.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ModalIncluirEditarComponent } from './components/modal-incluir-editar/m
     HomeComponent,
     ModalExcluirComponent,
     ModalIncluirEditarComponent,
+    ModalGenericoComponent,
   ],
   imports: [
     FormsModule,

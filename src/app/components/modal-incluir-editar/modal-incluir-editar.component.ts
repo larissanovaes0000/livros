@@ -1,24 +1,27 @@
-import { Component, inject, Input } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, inject, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Livro } from '../../interfaces/livro';
 import { CrudLivrosService } from '../../services/crud-livros.service';
+import { ModalGenericoComponent } from '../../shared/components/modal-generico/modal-generico.component';
 
 @Component({
   selector: 'app-modal-incluir-editar',
   templateUrl: './modal-incluir-editar.component.html',
   styleUrl: './modal-incluir-editar.component.scss'
 })
-export class ModalIncluirEditarComponent {
-  
+export class ModalIncluirEditarComponent implements OnInit {
+
   @Input() livro!: Livro;
   @Input() novoId!: string;
-  
+
   activeModal = inject(NgbActiveModal);
   edicao = false;
 
-  constructor(private _crudLivrosService: CrudLivrosService) { }
+  constructor(
+    private _crudLivrosService: CrudLivrosService,
+    private _modalService: NgbModal
+  ) { }
 
   ngOnInit() {
     if (this.livro) {
@@ -56,12 +59,18 @@ export class ModalIncluirEditarComponent {
       if (this.edicao) {
         this._crudLivrosService.editarLivro(obj).subscribe({
           next: () => {
+            const modalRef = this._modalService.open(ModalGenericoComponent)
+            modalRef.componentInstance.mensagem = "Livro alterado com sucesso";
+            modalRef.componentInstance.class = 'success';
             this.activeModal.close();
           }
         })
       } else {
         this._crudLivrosService.incluirLivro(obj).subscribe({
           next: () => {
+            const modalRef = this._modalService.open(ModalGenericoComponent)
+            modalRef.componentInstance.mensagem = "Livro incluído com sucesso";
+            modalRef.componentInstance.class = 'success';
             this.activeModal.close();
           }
         })

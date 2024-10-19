@@ -1,17 +1,28 @@
-.modal-incluir{
-    label{
-        margin-bottom: 6px;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 500;
+.modal-incluir {
+
+  .modal-header {
+    button {
+      top: 12px;
+      position: absolute;
+      right: 12px;
+
+      &:focus {
+        box-shadow: none;
+      }
     }
+  }
 
-    .texto-erro{
-        color: #df4654;
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
+  label {
+    margin-bottom: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
 
-
+  .texto-erro {
+    color: #df4654;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
 }

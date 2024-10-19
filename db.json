@@ -2,10 +2,10 @@
   "livros": [
     {
       "id": "1",
-      "nome": "Um livro Novo",
-      "descricao": "A descrição de um livro é uma tipologia textual que retrata o enredo, o tema ou a ideia da obra.",
-      "preco": 8.5,
-      "autor": "Yasmina Khadra"
+      "nome": "Um livro Novo do cvbcf",
+      "descricao": "uma descrição aqqwsdasuiiiii",
+      "preco": 9.9,
+      "autor": "Yasmina Khadra19"
     },
     {
       "id": "2",
@@ -17,7 +17,7 @@
     {
       "id": "4",
       "nome": "Livro 4",
-      "descricao": "A descrição de um livro é uma tipologia textual",
+      "descricao": "A descrição de um livro é uma tipologia textualsdfsfd",
       "preco": 6,
       "autor": "Yasmina Khadra"
     },
@@ -27,34 +27,6 @@
       "descricao": "A descrição de um livro é uma tipologia textual que retrata o enredo, o tema ou a ideia da obra.",
       "preco": 3,
       "autor": "Yasmina Khadra"
-    },
-    {
-      "id": "6",
-      "nome": "Um novo Livro",
-      "descricao": "testando um novo livro",
-      "preco": 10,
-      "autor": "teste Autor"
-    },
-    {
-      "id": "6",
-      "nome": "sefeswf",
-      "descricao": "sfdsfd",
-      "preco": 1,
-      "autor": "sdfsdf"
-    },
-    {
-      "id": "7",
-      "nome": "Um livro teste",
-      "descricao": "sdfsdfdsf",
-      "preco": 8.9,
-      "autor": "dfgdfg"
-    },
-    {
-      "id": "8",
-      "nome": "dssdfsd",
-      "descricao": "sdfsfdsdf",
-      "preco": 9,
-      "autor": "sfsdfsdf"
     }
   ]
 }

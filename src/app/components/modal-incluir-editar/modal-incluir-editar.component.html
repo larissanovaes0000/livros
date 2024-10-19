@@ -2,7 +2,7 @@
     <div class="modal-header">
       <h2 class="modal-title" *ngIf="!edicao">Incluir</h2>
       <h2 class="modal-title" *ngIf="edicao">Editar</h2>
-      <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+      <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
     </div>
     <div class="modal-body">
       <form [formGroup]="formulario">
@@ -63,6 +63,6 @@
       </form>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-primary" (click)="salvar()" [disabled]="formulario.invalid">Salvar</button>
+      <button type="button" class="btn btn-primary" (click)="salvar()" [disabled]="formulario.invalid || !formulario.dirty">Salvar</button>
     </div>
   </div>
