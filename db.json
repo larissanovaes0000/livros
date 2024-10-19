@@ -1,39 +1,39 @@
 {
   "livros": [
     {
-      "id": 1,
-      "nome": "Livro 1",
+      "id": "1",
+      "nome": "Um livro Novo",
       "descricao": "A descrição de um livro é uma tipologia textual que retrata o enredo, o tema ou a ideia da obra.",
       "preco": 8.5,
       "autor": "Yasmina Khadra"
     },
     {
-      "id": 2,
-      "nome": "Livro 2",
+      "id": "2",
+      "nome": "O silêncio das montanhas",
       "descricao": "A descrição de um livro é uma tipologia textual que retrata o enredo, o tema ou a ideia da obra.",
-      "preco": 9.0,
+      "preco": 9,
       "autor": "Yasmina Khadra"
     },
     {
-      "id": 3,
-      "nome": "Livro 3",
-      "descricao": "A descrição de um livro é uma tipologia textual que retrata o enredo, o tema ou a ideia da obra.",
-      "preco": 5.8,
-      "autor": "Yasmina Khadra"
-    },
-    {
-      "id": 4,
+      "id": "4",
       "nome": "Livro 4",
       "descricao": "A descrição de um livro é uma tipologia textual que retrata o enredo, o tema ou a ideia da obra.",
-      "preco": 6.0,
+      "preco": 6,
       "autor": "Yasmina Khadra"
     },
     {
-      "id": 5,
+      "id": "5",
       "nome": "Livro 5",
       "descricao": "A descrição de um livro é uma tipologia textual que retrata o enredo, o tema ou a ideia da obra.",
-      "preco": 3.0,
+      "preco": 3,
       "autor": "Yasmina Khadra"
+    },
+    {
+      "id": "6",
+      "nome": "Um novo Livro",
+      "descricao": "testando um novo livro",
+      "preco": 10,
+      "autor": "teste Autor"
     }
   ]
 }

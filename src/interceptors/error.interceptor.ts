@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { ModalErroComponent } from '../app/shared/components/modal-erro/modal-erro.component';
+import { ModalErroComponent } from '../app/modules/shared/components/modal-erro/modal-erro.component';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {

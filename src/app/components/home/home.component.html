@@ -1,23 +1,26 @@
-<div>
+<div class="home">
+  <div class="home__botao-incluir">
+    <button type="button" class="btn btn-primary" (click)="abrirModal()">Incluir Novo Livro</button>
+  </div>
   <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">#</th>
         <th scope="col">Nome</th>
         <th scope="col">Preço</th>
         <th scope="col">Autor</th>
+        <th scope="col">Descrição</th>
         <th scope="col">Editar</th>
         <th scope="col">Excluir</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let livro of listaLivros">
-        <td>{{ livro.id }}</td>
         <td>{{ livro.nome }}</td>
         <td>{{ livro.preco | currency:'BRL'}}</td>
         <td>{{ livro.autor }}</td>
-        <td><button type="button" class="btn btn-outline-success" (click)="editar()">Editar</button></td>
-        <td><button type="button" class="btn btn-outline-danger" (click)="excluir()">Excluir</button></td>
+        <td>{{ livro.descricao }}</td>
+        <td><button type="button" class="btn btn-outline-success" (click)="abrirModal(livro)">Editar</button></td>
+        <td><button type="button" class="btn btn-outline-danger" (click)="excluir(livro)">Excluir</button></td>
       </tr>
     </tbody>
   </table>

@@ -1,5 +1,4 @@
-import { Component, inject, TemplateRef } from '@angular/core';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-modal-erro',
@@ -7,5 +6,5 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './modal-erro.component.scss'
 })
 export class ModalErroComponent {
-  
+
 }
