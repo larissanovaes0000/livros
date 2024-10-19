@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CrudLivrosService } from '../../services/crud-livros.service';
-import { Livro } from '../../interfaces/livro';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalIncluirComponent } from '../modal-incluir/modal-incluir.component';
+import { Livro } from '../../interfaces/livro';
+import { CrudLivrosService } from '../../services/crud-livros.service';
 import { ModalExcluirComponent } from '../modal-excluir/modal-excluir.component';
+import { ModalIncluirEditarComponent } from '../modal-incluir-editar/modal-incluir-editar.component';
 
 @Component({
   selector: 'app-home',
@@ -36,10 +36,9 @@ export class HomeComponent implements OnInit {
   }
 
   abrirModal(livro?: Livro) {
-    const modalRef = this._modalService.open(ModalIncluirComponent);
+    const modalRef = this._modalService.open(ModalIncluirEditarComponent);
     modalRef.componentInstance.livro = livro;
     modalRef.componentInstance.novoId = this.listaLivros.length + 1;
-
     modalRef.closed.subscribe(() => this.obterLivros())
   }
 }
