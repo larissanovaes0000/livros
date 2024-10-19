@@ -2,6 +2,6 @@ export interface Livro {
     id: string;
     nome: string;
     descricao: string;
-    preco: number,
+    preco: number;
     autor: string;
 }

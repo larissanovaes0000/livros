@@ -9,15 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CrudLivrosService } from './services/crud-livros.service';
-import { ModalIncluirComponent } from './components/modal-incluir/modal-incluir.component';
 import { ModalExcluirComponent } from './components/modal-excluir/modal-excluir.component';
+import { ModalIncluirEditarComponent } from './components/modal-incluir-editar/modal-incluir-editar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ModalIncluirComponent,
     ModalExcluirComponent,
+    ModalIncluirEditarComponent,
   ],
   imports: [
     FormsModule,
